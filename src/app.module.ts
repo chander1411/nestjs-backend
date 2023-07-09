@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
+import { PruebaModule } from './prueba/prueba.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { UsersModule } from './users/users.module';
       'mongodb://root:root@localhost:27019/nestjs?authSource=admin',
     ),
     UsersModule,
+    PruebaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
